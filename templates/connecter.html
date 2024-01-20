@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset = "UTF-8">
+   <title>Se connecter</title>
+</head>
+   {% if error %}
+<h3>{{error}}</h3>
+{% endif %}
+<div>
+  <form action="" method="post">
+    <div>
+    <input type="text" placeholder="Email" type="text" name="e_mail" maxlength="40" required autofocus/>
+    <br>
+    <input type="password" placeholder="Mot de passe" name="mot_de_passe" maxlength="40" required />
+    <br>
+    </div>
+    <div>
+    <button type="submit" value="Submit">Connexion</button></p>
+    </div>
+    <div>
+    <a href={{url_for("index")}}><h5>Créer un compte</h5></a>
+    </div>
+  </form>
+ </div> 
+  </p>
+</html>

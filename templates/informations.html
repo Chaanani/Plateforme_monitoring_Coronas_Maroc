@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset = "UTF-8">
+    <title>les informations</title>
+<body>
+    <center>
+    <h6>Mes informations</h6>
+           <table border="1">
+   <tr>
+       <th>ID</th>
+       <th>Prénom</th>
+       <th>Nom</th>
+       <th>Email</th>
+       <th>descripition</th>
+       <th>supprimer</th>
+       <th>modifier</th>
+   </tr>
+    {% for data in data %}
+   <tr>
+       <td>{{data[0]}}</td>
+       <td>{{data[1]}}</td>
+       <td>{{data[2]}}</td>
+       <td>{{data[3]}}</td>
+       <td>{{data[5]}}</td>
+       <td><a href="supprimer/{{data[0]}}"> supprimer</a></td>
+        <td><a href="modifier/{{data[0]}}"> modifier</a></td>
+       </br>
+       {% endfor %}
+       <a href="deconnexion">deconnexion</a>
+   </tr>
+</table>
+    </center>
+</body>
+</html>

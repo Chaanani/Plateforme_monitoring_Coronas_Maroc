@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <meta charset = "UTF-8">
+   <title>mkffbf</title>
+</head>
+<body>
+    <h2>modificatin</h2>
+    <form action="" method="post">
+            {% for data in data %}
+            <input type="hidden" name="idClient" value="{{data[0]}}" > <br>
+            <input type="text"  name="prenom" value="{{data[1]}}"  required/><br>
+            <input type="text" name="nom" value="{{data[2]}}"  required/><br>
+            <input type="text" name="e_mail" value="{{data[3]}}"  required/><br>
+            <input type="password" name="mot_de_passe" value= "{{data[4]}}"  required/><br>
+            <textarea name="description" placeholder= "Description" >{{data[5]}} </textarea><br>
+             {% endfor %}
+            <input type="submit" value="connexion"><br>
+    </form>
+</body>
+</html>
